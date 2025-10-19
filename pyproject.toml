@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "prog3-backend"
+version = "1.0.0"
+description = "Backend do projeto da disciplina de Programação 3"
+authors = ["MarcosVVMK"]
+readme = "README.md"
+packages = [
+    {include = "app"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.116.0"
+uvicorn = {extras = ["standard"], version = "^0.35.0"}
+psycopg2-binary = "^2.9.10"
+sqlalchemy = "^2.0.43"
+alembic = "^1.16.5"
+python-dotenv = "^1.1.1"
+pydantic = "^2.11.0"
+pydantic-settings = "^2.10.0"
+email-validator = "^2.3.0"
+pyjwt = "^2.8.0"
+passlib = "^1.7.4"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-asyncio = "^0.24.0"
+httpx = "^0.28.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

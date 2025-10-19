@@ -65,38 +65,31 @@ Backend do projeto da disciplina de Programação 3
 prog3_backend/
 ├── app/
 │   ├── __init__.py
-│   ├── config.py              # Configurações da aplicação
-│   ├── database/              # Configuração do banco de dados
-│   │   ├── __init__.py
-│   │   └── database.py
-│   ├── models/                # Modelos do SQLAlchemy
-│   │   ├── __init__.py
-│   │   └── user.py
-│   ├── schemas/               # Schemas do Pydantic
-│   │   ├── __init__.py
-│   │   └── user.py
-│   ├── controllers/           # Controladores (endpoints/roteadores)
+│   ├── config.py          # Configurações da aplicação
+│   ├── database.py        # Configuração do banco de dados
+│   ├── models.py          # Modelos do SQLAlchemy
+│   ├── schemas.py         # Schemas do Pydantic
+│   ├── controllers/       # Controladores (endpoints/roteadores)
 │   │   ├── __init__.py
 │   │   └── user_controller.py
-│   ├── services/              # Lógica de negócio
+│   ├── services/          # Lógica de negócio
 │   │   ├── __init__.py
 │   │   ├── base_service.py
 │   │   └── user_service.py
-│   ├── repositories/          # Camada de acesso a dados
+│   ├── repositories/      # Camada de acesso a dados
 │   │   ├── __init__.py
 │   │   ├── base_repository.py
 │   │   └── user_repository.py
 │   └── routers/
 │       ├── __init__.py
-│       ├── health.py          # Endpoints de health check
-│       └── users.py           # Endpoints de usuários
-├── main.py                    # Arquivo principal da aplicação
-├── pyproject.toml             # Configuração do Poetry
-├── poetry.lock                # Lock file do Poetry
-├── Dockerfile                 # Configuração do Docker
-├── docker-compose.yml         # Orquestração dos containers
-├── .env.example               # Exemplo de variáveis de ambiente
-├── .env                       # Variáveis de ambiente
+│       ├── health.py      # Endpoints de health check
+│       └── users.py       # Endpoints de usuários
+├── main.py                # Arquivo principal da aplicação
+├── pyproject.toml         # Configuração do Poetry
+├── poetry.lock           # Lock file do Poetry
+├── Dockerfile            # Configuração do Docker
+├── docker-compose.yml    # Orquestração dos containers
+├── .env.example          # Exemplo de variáveis de ambiente
 └── README.md
 ```
 
