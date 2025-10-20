@@ -32,11 +32,11 @@ class UserCreate(UserBase):
 
 
 class UserUpdate(BaseModel):
-    first_name: Optional[str] = Field(None, min_length=2, max_length=100)
-    last_name: Optional[str] = Field(None, min_length=2, max_length=100)
-    email: Optional[EmailStr] = None
-    phone: Optional[str] = Field(None, max_length=20)
-    picture_id: Optional[str] = Field(None, max_length=255)
+    first_name: Optional[str]   = Field(None, min_length=2, max_length=100)
+    last_name: Optional[str]    = Field(None, min_length=2, max_length=100)
+    email: Optional[EmailStr]   = None
+    phone: Optional[str]        = Field(None, max_length=20)
+    picture_id: Optional[str]   = Field(None, max_length=255)
 
 
 class UserChangePassword(BaseModel):

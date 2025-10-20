@@ -16,4 +16,15 @@ class User(Base):
     picture_id  = Column(String, index=True)
     created_at  = Column(DateTime(timezone=True), server_default=func.now())
     updated_at  = Column(DateTime(timezone=True), onupdate=func.now())
-    notas_fiscais = relationship("Nfc", back_populates="user")
+    
+    nfcs = relationship("Nfc", back_populates="user")
+    pictures = relationship("UserPicture", back_populates="user", cascade="all, delete-orphan")
+    
+    @property
+    def current_picture(self):
+        return next((p for p in self.pictures if p.is_active), None)
+    
+    @property
+    def profile_picture_url(self):
+        picture = self.current_picture
+        return picture.url if picture else None

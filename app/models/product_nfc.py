@@ -15,4 +15,5 @@ class ProductNfc(Base):
     unit_value      = Column(Float, nullable=False, index=True)
     total_price     = Column(Float, nullable=False)
     price_per_unit  = Column(Float, nullable=False, index=True)
+    
     nfc             = relationship("Nfc", back_populates="product")

@@ -16,5 +16,6 @@ class Nfc(Base):
     emission_uf     = Column(String(2), index=True)
     nfc_total_price = Column(Float, nullable=False)
     discount_value  = Column(Float, default=0.0)
+    
     issuer          = relationship("Issuer", back_populates="nfcs")
     products        = relationship("ProductNfc", back_populates="nfc", cascade="all, delete-orphan")
